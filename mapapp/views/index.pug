@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  .pg_header
+    a.logo 物联网信息平台
+    a.pg_dl(href='login.pug') 登录
+  form.box
+    .item
+      label(for='username') 用户名
+      input#username(type='text', placeholder='由数字或字母组成，长度在4-10位')
+      br
+      span#checkNameInfo.info
+    .item
+      label(for='eml') 邮箱
+      input#eml(type='email', placeholder='用于找回密码')
+      br
+      span#checkEmlInfo.info(style='visibility: visible')
+    .item
+      label(for='pwd1') 密码
+      input#pwd1(type='password', placeholder='由数字或字母组成，长度在7-16位')
+      br
+      span#checkPwdOne.info(style='visibility: visible')
+    .item
+      label(for='pwd2') 确认密码
+      input#pwd2(type='password')
+      br
+      span#checkPwdTwo.info(style='visibility: visible')
+    .item
+      button.btn(type='button') 注册
+  script(type='text/javascript', src='/javascripts/register.js')

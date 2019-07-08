@@ -1,0 +1,75 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        title LoRaMap-3D
+        // <base href="//webapi.amap.com/ui/1.0/ui/control/BasicControl/examples/" />
+        meta(name='viewport', content='initial-scale=1.0, user-scalable=no, width=device-width,maximum-scale = 1.0 ')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        // 样式
+        // 网页，地图整体样式
+        link(href='http://cache.amap.com/lbs/static/main1119.css', rel='stylesheet')
+        link(href='https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css', rel='stylesheet')
+        // 同步加载地图JS API脚本
+        script(src='https://webapi.amap.com/maps?v=1.4.14&key=fadc93ceb7cd2cb0796630cbe752dbb1&plugin=AMap.Autocomplete,AMap.ControlBar,AMap.MouseTool,AMap.Geocoder', type='text/javascript')
+        script(src='https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js', type='text/javascript')
+        // 引入jquery库
+        script(src='https://a.amap.com/jsapi_demos/static/demo-center/js/jquery-1.11.1.min.js', type='text/javascript')
+        // UI组件库 1.0
+        script(src='//webapi.amap.com/ui/1.0/main.js?v=1.0.11')
+        style(type='text/css').
+            #measure {
+                display: flex;
+                flex-direction: column;
+                min-width: 0;
+                word-wrap: break-word;
+                background-color: #fff;
+                background-clip: border-box;
+                border-radius: .25rem;
+                width: 22rem;
+                border-width: 0;
+                box-shadow: 0 2px 6px 0 rgba(114, 124, 245, .5);
+                position: fixed;
+                top: 1rem;
+                left: 1rem;
+                -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+                padding: 0.75rem 1.25rem;
+            }
+            #display{
+                top: 10rem;
+                left: 1rem;
+                width:22rem
+            }
+    body
+        // 建立地图容器
+        #container
+        // 距离测试和经纬度测量功能区
+        #measure
+            .input-item
+                input(name='func', type='radio', checked='', value='lnglatMeasure')
+                span.input-text 经纬度测量
+                input(name='func', type='radio', value='rule')
+                span.input-text 距离测量
+                // <input type="radio" name='func' value='measureArea'><span class="input-text">面积测量</span>
+                input#close.btn(type='button', value='关闭')
+        // 位置信息显示区域
+        #text.info(style='right: 10rem ;width: 29rem')
+            .input-item
+                .input-item-prepend
+                    span.input-item-text(style='width:27rem;') 请用鼠标在地图上点击获取经纬度信息
+            .input-item
+                .input-item-prepend
+                    span.input-item-text 地址
+                input#address(type='text')
+        // 节点信息显示区
+        #display.info
+            .input-item
+                .input-item-prepend
+                    span.input-item-text 序号
+                input#num(type='text')
+            .input-item
+                .input-item-prepend
+                    span.input-item-text 数据
+                input#data(type='text')
+    script(type='text/javascript', src='/javascripts/map.js')

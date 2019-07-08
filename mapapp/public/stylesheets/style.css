@@ -1,0 +1,92 @@
+.pg_header{
+  position: fixed;
+  height: 48px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #2459a2;
+  line-height: 48px;
+}
+.pg_header .logo{
+  margin: 0 auto;
+  float: left;
+  width: 200px;
+  text-align: center;
+  line-height: 48px;
+  font-size: 28px;
+  color: white;
+}
+.pg_dl{
+  left: 400px;
+  display: inline-block;
+  padding: 0 40px;
+  color: white;
+}
+/*设置鼠标放在注册上时的样式*/
+.pg_header .pg_dl:hover{
+  background-color: #2459fb;
+  cursor: pointer;
+}
+/*设置register表单整体区域格式*/
+.box{
+  position: relative;
+  /*表单居中*/
+  margin:100px auto;
+  width: 500px;
+  height: 400px;
+  /*显示表单的轮廓*/
+  padding: 1em;
+  border-radius: 1em;
+  border: 1px solid #CCC;
+  background-color: #CCCCCC;
+}
+/*设置register域中item格式*/
+.item {
+  margin-top: 1em;
+  width: 500px;
+  height: 50px;
+}
+
+label {
+  /* 确保所有label大小相同并正确对齐 */
+  display: inline-block;
+  width: 90px;
+  font-weight: bold;
+  text-align: right;
+}
+input{
+  position: relative;
+  margin: 0 auto;
+  /* 确保所有文本输入框字体相同*/
+  font: 1em sans-serif;
+
+  /* 使所有文本输入框大小相同 */
+  width: 300px;
+  height: 34px;
+  box-sizing: border-box;
+
+  /* 调整文本输入框的边框样式 */
+  border-radius: 0.5em;
+  border: 1px solid #999;
+}
+.btn {
+  display: block;
+  height: 34px;
+  width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1px;
+  background-color: #6633FF;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 24px;
+  /*border-width: 0px;*/
+  border-radius:8px;
+}
+.info {
+  float: right;
+  /* height: 22px; */
+  font-size: 12px;
+  margin-right: 47px;
+  color: red;
+}
